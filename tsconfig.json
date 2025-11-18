@@ -4,7 +4,7 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -12,6 +12,9 @@
     "strict": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
+    "esModuleInterop": true,
+
+    "types": ["vitest", "node"],
 
     "baseUrl": "./src",
     "paths": {
@@ -22,6 +25,6 @@
       "@types/*": ["types/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "vite.config.ts"],
   "exclude": ["node_modules", "dist"]
 }
