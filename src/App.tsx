@@ -2,6 +2,7 @@ import Calculator from '@components/Calculator';
 import BaselinePanel from '@components/BaselinePanel';
 import DebouncePanel from '@components/DebouncePanel';
 import DeferredPanel from '@components/DefferdPanel';
+import TransitionPanel from '@components/TransitionPanel';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Calculator />
       <DebouncePanel />
       <DeferredPanel />
+      <TransitionPanel />
       <BaselinePanel />
     </div>
   );
