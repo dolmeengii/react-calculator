@@ -16,3 +16,17 @@ export function measure(label: string) {
 
   return entry?.duration ?? 0;
 }
+
+export function measureSync<T>(
+  label: string,
+  fn: () => T,
+): {
+  result: T;
+  duration: number;
+} {
+  markStart(label);
+  const result = fn();
+  markEnd(label);
+  const duration = measure(label);
+  return { result, duration };
+}
